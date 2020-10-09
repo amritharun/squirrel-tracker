@@ -1,7 +1,8 @@
 # squirrel-tracker
 IEOR 4501 Final Project
 
-Authored by Amrith Arunachalam (aa4053) and Chaoran Gou (cg3215)
+Authored by Amrith Arunachalam (UNI: aa4053) and Chaoran Gou (UNI: cg3215)
+Project Group: Amrith & Chaoran
 
 Description
 -------------------
@@ -22,4 +23,8 @@ $ python manage.py export_squirrel_data /path/to/file.csv
 - Add squirrel sites by clicking **Add** on sightings page. Located at `/sightings/add`
 - Edit current squirrel sites. Located at `/sightings/<unique-squirrel-id>`
 - See the statistics on current squirrel sites. Located at `/sightings/stats`
+
+
+Websites
+-------------------
 
