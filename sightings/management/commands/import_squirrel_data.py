@@ -1,12 +1,10 @@
-import csv
-
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 from sightings.models import Squirrel
-
+import csv
 
 class Command(BaseCommand):
-    help = 'Import squirrel data from csv file'
+    help = 'Data import'
 
     def add_arguments(self, parser):
         parser.add_argument('csv_file')
