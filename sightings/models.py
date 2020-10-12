@@ -7,12 +7,12 @@ from django.forms import ModelForm
 class Squirrel(models.Model):
 
     X = models.FloatField(
-        help_text=_('X'),
+        help_text=_('Longtitude'),
         null=True,
     )
     
     Y = models.FloatField(
-        help_text=_('Y'),
+        help_text=_('Latitude'),
         null=True,
     )
 
