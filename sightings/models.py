@@ -142,6 +142,7 @@ class Squirrel(models.Model):
         null=True,
         blank=True,
     )
+
     AG = 'Above Ground'
     GP = 'Ground Plane'
     BLANK = ''
@@ -168,6 +169,7 @@ class Squirrel(models.Model):
         null=True,
         blank=True,
     )
+
     Specific_Location = models.CharField(
         help_text=_('Specific Location'),
         max_length=100,
@@ -222,12 +224,17 @@ class Squirrel(models.Model):
         help_text=_('Tail twitches'),
         choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
 
-    Approaches = models.CharField(help_text=_('Approaches'),
-            choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Indifferent = models.CharField(help_text=_('Indifferent'),
-            choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
-    Runs_From = models.CharField(help_text=_('Runs from'),
-            choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
+    Approaches = models.CharField(
+        help_text=_('Approaches'),
+        choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
+
+    Indifferent = models.CharField(
+        help_text=_('Indifferent'),
+        choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
+
+    Runs_From = models.CharField(
+        help_text=_('Runs from'),
+        choices=((TRUE,'true'),(FALSE,'false')),default=FALSE,max_length=5,null=True)
     
     Other_Interactions = models.CharField(
         help_text=_('Other Interactions'),
