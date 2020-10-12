@@ -41,4 +41,4 @@ class Command(BaseCommand):
                 runs_from=dict_['Runs from'].lower() == 'true',
             ))
 
-        Sighting.objects.bulk_create(sightings)
+        Squirrel.objects.bulk_create(sightings)
