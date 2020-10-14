@@ -31,6 +31,6 @@ def get_stats(request):
 	'C':C,
 	'B':B,
 	}
-    Return render(request, 'tracker/stats.html', context)
+    return render(request, 'tracker/stats.html', context)
 
 # Create your views here.
