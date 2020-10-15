@@ -7,6 +7,13 @@ from .models import Sighting
 def main(request):
     return render(request, 'tracker/main.html')
 
+def sighting(request):
+    squirrels = Sighting.objects.all()
+    context = {
+            'squirrels': squirrels,
+        }
+    return render(request, 'tracker/sightings.html',context)
+
 def get_stats(request):
     AM = 0
     PM = 0
