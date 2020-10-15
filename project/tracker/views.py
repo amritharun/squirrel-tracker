@@ -4,4 +4,7 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse('Hello')
 
-# Create your views here.
+def sighting(request):
+    sightings = Sighting.objects.all()
+    context = {'sighting': sightings}
+    return render(request, 'tracker/sightings.html',context)
