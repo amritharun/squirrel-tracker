@@ -18,7 +18,7 @@ def get_stats(request):
             AM += 1
         if m.SHIFT == 'PM':
             PM += 1
-        if m.COLOR == 'Grey':
+        if m.COLOR == 'Gray':
             G += 1
         if m.COLOR == 'Cinnamon':
             C += 1
