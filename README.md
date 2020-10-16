@@ -27,7 +27,7 @@ $ python manage.py export_squirrel_data /path/to/file.csv
 
 Websites
 -------------------
-http://34.86.85.64/sightings/
-http://34.86.85.64/sightings/stats/
-http://34.86.85.64/sightings/add/
-http://34.86.85.64/map/
+- http://34.86.85.64/sightings/
+- http://34.86.85.64/sightings/stats/
+- http://34.86.85.64/sightings/add/
+- http://34.86.85.64/map/
