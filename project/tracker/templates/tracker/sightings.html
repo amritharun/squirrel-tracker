@@ -1,0 +1,15 @@
+<!doctype html>
+<head>
+	<h1> Sightings </h1>
+</head>
+
+<body style="background-color:green;">
+	<p><a href='/'>Go to main page</a> </p>
+	 
+	<h1> Click on any Unique Squirrel ID to edit that Squirrel entry </h1>
+	<ul>
+		{% for squirrel in sightings %}
+		<li> <a href='/sightings/{{squirrel.S_ID}}/'> {{squirrel.S_ID}} </a> </li>
+		{% endfor %}
+	</ul>
+</body>
