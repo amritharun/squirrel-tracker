@@ -7,6 +7,13 @@ from .models import Sighting
 def main(request):
     return render(request, 'tracker/main.html')
 
+def map(request):
+    sightings= Sighting.objects.all()[:100]
+    context ={
+            'sightings':sightings,
+            }
+    return render(request, 'tracker/map.html', context)
+
 def sighting(request):
     squirrels = Sighting.objects.all()
     context = {
