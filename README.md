@@ -2,7 +2,7 @@
 IEOR 4501 Final Project
 
 Authored by Amrith Arunachalam (UNI: aa4053) and Chaoran Gou (UNI: cg3215)
-Project Group: Amrith & Chaoran
+Project Group: Amrith & Chaoran Section 001
 
 Description
 -------------------
