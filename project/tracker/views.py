@@ -2,10 +2,41 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse 
 
 from .models import Sighting
+from .forms import SightingForm
 
 
 def main(request):
     return render(request, 'tracker/main.html')
+
+                                                                                                 
+def add_squirrel(request):
+    if request.method == "POST":
+        form= SightingForm(request.POST)
+        return render(request, 'tracker/main.html')
+        if form.is_valid():
+            form.save()
+            return redirect(f'/sightings')
+    else:
+        form = SightingForm()
+        context ={
+                'form':form,
+                }
+    return render(request,'tracker/edit.html',context)
+
+
+def edit_squirrel(request,UID):
+    squirrel= Squirrel.objects.get(UID=UID)
+    if request.method =='POST':
+        form = SquirrelForm(request.POST, instance = squirrel)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/sightings')
+    else:
+        form = SquirrelForm(instance=squirrel)
+        context ={
+            'form':form,
+                }
+    return render(request, 'tracker/edit.html', context)
 
 def map(request):
     sightings= Sighting.objects.all()[:100]
