@@ -8,7 +8,7 @@
 	 
 	<h1> Click on any Unique Squirrel ID to edit that Squirrel entry </h1>
 	<ul>
-		{% for squirrel in sightings %}
+		{% for squirrel in sighting %}
 		<li> <a href='/sightings/{{squirrel.S_ID}}/'> {{squirrel.S_ID}} </a> </li>
 		{% endfor %}
 	</ul>

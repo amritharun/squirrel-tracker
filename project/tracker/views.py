@@ -24,15 +24,15 @@ def add_squirrel(request):
     return render(request,'tracker/edit.html',context)
 
 
-def edit_squirrel(request,UID):
-    squirrel= Squirrel.objects.get(UID=UID)
+def edit_squirrel(request,S_ID):
+    squirrel= Sighting.objects.get(S_ID=S_ID)
     if request.method =='POST':
-        form = SquirrelForm(request.POST, instance = squirrel)
+        form = SightingForm(request.POST, instance = squirrel)
         if form.is_valid():
             form.save()
             return redirect(f'/sightings')
     else:
-        form = SquirrelForm(instance=squirrel)
+        form = SightingForm(instance=squirrel)
         context ={
             'form':form,
                 }
@@ -48,7 +48,7 @@ def map(request):
 def sighting(request):
     squirrels = Sighting.objects.all()
     context = {
-            'squirrels': squirrels,
+            'sighting': squirrels,
         }
     return render(request, 'tracker/sightings.html',context)
 
