@@ -12,9 +12,11 @@
 
 		<div class="container">
 			<h1> List of Squirrels Based On Unique Ids </h1>
+			<h2><a href='/sightings/add'> add</a> </h2>
 			<ul>
 				{% for squirrel in sighting %}
 				<li> <a href='/sightings/{{squirrel.S_ID}}/'> {{squirrel.S_ID}} </a> </li>
+				{{squirrel.DATE}}
 				{% endfor %}
 			</ul>
 		</div>
